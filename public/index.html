@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WhatsApp API Server</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    h1 {
+      color: #25D366;
+      border-bottom: 2px solid #25D366;
+      padding-bottom: 10px;
+    }
+    .endpoint {
+      background-color: #f5f5f5;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 5px;
+    }
+    .method {
+      display: inline-block;
+      padding: 5px 10px;
+      border-radius: 3px;
+      color: white;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+    .get { background-color: #61affe; }
+    .post { background-color: #49cc90; }
+    code {
+      background-color: #e8e8e8;
+      padding: 2px 5px;
+      border-radius: 3px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>WhatsApp API Server</h1>
+    <p>This server provides a REST API for WhatsApp messaging using the Baileys library.</p>
+    
+    <h2>API Endpoints</h2>
+    
+    <div class="endpoint">
+      <span class="method get">GET</span>
+      <code>/health</code>
+      <p>Check if the server is running.</p>
+    </div>
+    
+    <div class="endpoint">
+      <span class="method post">POST</span>
+      <code>/send-message</code>
+      <p>Send a text message to a WhatsApp number.</p>
+    </div>
+    
+    <div class="endpoint">
+      <span class="method post">POST</span>
+      <code>/send-media</code>
+      <p>Send a media message (image, document, etc.) to a WhatsApp number.</p>
+    </div>
+    
+    <div class="endpoint">
+      <span class="method post">POST</span>
+      <code>/disconnect</code>
+      <p>Logout and disconnect a WhatsApp session.</p>
+    </div>
+    
+    <div class="endpoint">
+      <span class="method get">GET</span>
+      <code>/status/:deviceId</code>
+      <p>Check the connection status of a device.</p>
+    </div>
+    
+    <h2>Socket.IO Events</h2>
+    <p>This server also supports real-time communication using Socket.IO for QR code scanning and session updates.</p>
+    
+    <div style="margin-top: 40px; color: #888; font-size: 14px; text-align: center;">
+      Powered by <a href="https://github.com/WhiskeySockets/Baileys" style="color: #25D366; text-decoration: none;">Baileys</a>
+    </div>
+  </div>
+</body>
+</html>
